@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "68ff9059-a793-4b22-bb14-ec7d90ec0d17",
+		"name": "Shipt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test case 1 - Passed",
+			"item": [
+				{
+					"name": "https://swapi.co/api/people",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/people",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"people"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/people/10/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/people/10/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"people",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/films/1/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/films/1/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"films",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": " Assert that Obi-Wan Kenobi was in the film A New Hope \n1. Get list of all people\n2. Find in responce Obi-Wan Kenobi\n3. Get information about Obi-Wan Kenobi by requesting URL from responce's 'URL' attribute\n4. Find in response attribute 'films' and get info about each film in that list\n5. Check attribute 'title' in request's responce. \n Test result : Obi-Wan Kenobi was in the film A New Hope. - Passed",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7d02573f-d75c-4a0e-a157-cc16e7dcc9bf",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c76e865e-3453-45fe-a255-265e65c0b937",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Test case 2. - Failed",
+			"item": [
+				{
+					"name": "https://swapi.co/api/starships",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/starships",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"starships"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Assert that the Enterprise is a starship (yes, this should fail) \n1. Request all the starships \n2. In response check names of all starships. If it contains \"enterprise\" than it is starship.\nTest result: no Enterprise in the list of Starships. Failed",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bbe7c183-dfd7-44d5-b38f-f79067ced207",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "477042f1-9bab-4edb-b7b7-dc7446e68f32",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Test case 3 - Passed.",
+			"item": [
+				{
+					"name": "https://swapi.co/api/species/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/species/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/species/?page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/species/?page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/species/?page=3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/species/?page=3",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/species/?page=4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/species/?page=4",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/people/13/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/people/13/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"people",
+								"13",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Assert that Chewbacca is a Wookie \n1. Get list of all species. Response has link to the next page.\n2. Go over all pages to find Wookie. \n3. Get information about people by requesting each URL from responce's list in Wookie's 'people' attribute\n4. Check attribute 'name' in request's responce. \n Test result : Chewbacca is a Wookie. - Passed",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d379600a-8513-4127-ae80-4035f1022b38",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a6b82e74-a726-4cfa-8b2d-e35958bc3df7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Test case 4. - Passed",
+			"item": [
+				{
+					"name": "https://swapi.co/api/starships/schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/starships/schema",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"starships",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Assert that the /starships endpoint returns the fields below: \n○ name \n○ model \n○ crew \n○ hyperdrive_rating \n○ pilots \n○ films \n1. Get Starships schema \n2. Check Schema responce for name, model, crew, hyperdrive_rating, pilots, films.\n Test result. all of fields return in the /starships endpoint. - Passed",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a0128471-e2eb-4fdf-859e-08f2a0cd3121",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7ef77040-78eb-4155-b8bc-6040a9f39bf6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Test case 5. - Passed",
+			"item": [
+				{
+					"name": "https://swapi.co/api/starships/?page=4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/starships/?page=4",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"starships",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/starships/?page=3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/starships/?page=3",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"starships",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/starships/?page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/starships/?page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"starships",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://swapi.co/api/starships/schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.co/api/starships",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"starships"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": " Assert that the /starships count returned is correct by paging through the results\n 1. Get list of all starships\n 2. In the response check value of the 'count' atribute.\n 3. Count all the starships in the list of starhips. Go through all the pages\n 4. Starship's quantity should match value of the 'count' atribute. \n Test result: Starship's quantity matches value of the 'count' atribute. - Passed. ",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ca6dc3ed-f707-4679-95de-757642cc4b79",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "4104cb60-3bf5-4af3-96cb-18b3894caff7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
